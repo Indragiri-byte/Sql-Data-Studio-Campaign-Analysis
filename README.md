@@ -22,6 +22,29 @@ This project analyzes marketing campaign performance using SQL in Google BigQuer
 * Google Looker Studio
 * GitHub
 
+## Dataset
+
+`marketing_campaign_dataset.csv` contains the raw marketing campaign dataset used for this analysis.
+
+The dataset contains **200,000 campaign records** and includes campaign information such as:
+
+* Campaign ID
+* Company
+* Campaign type
+* Target audience
+* Duration
+* Marketing channel
+* Conversion rate
+* Acquisition cost
+* ROI
+* Location
+* Language
+* Clicks
+* Impressions
+* Engagement score
+* Customer segment
+* Campaign date
+
 ## Analysis Covered
 
 ### 1. Data Cleaning & Standardization
@@ -34,6 +57,7 @@ Standardized text fields and replaced blank values with `Unknown` to improve dat
 * Missing and blank value checks
 * Unique campaign type identification
 * Unique target audience identification
+* Total campaign count validation
 
 ### 3. Overall Campaign Performance
 
@@ -54,6 +78,7 @@ Standardized text fields and replaced blank values with `Unknown` to improve dat
 
 * Campaigns with the highest ROI relative to acquisition cost
 * Campaigns with both high conversion rate and high acquisition cost
+* Cost efficiency based on ROI relative to acquisition cost
 
 ### 6. Acquisition Cost vs ROI
 
@@ -65,7 +90,11 @@ Identified the most cost-efficient campaign type based on the relationship betwe
 
 ### 8. Marketing Channel Efficiency
 
-Compared marketing channels based on average ROI, average acquisition cost, and efficiency score.
+Compared marketing channels based on:
+
+* Average ROI
+* Average acquisition cost
+* Efficiency score
 
 ## Key Findings
 
@@ -81,7 +110,7 @@ Based on the analysis:
 
 ## Interactive Dashboard
 
-Explore the interactive marketing campaign dashboard created using Google Looker Studio:
+Explore the interactive marketing campaign dashboard created using Google Looker Studio.
 
 [Open Google Looker Studio Dashboard](https://datastudio.google.com/reporting/86b0ac94-3be1-492d-8f60-dd295fa9b621/page/GCB5F)
 
@@ -91,12 +120,15 @@ The complete SQL analysis is available in:
 
 `campaign_business_analysis.sql`
 
+The SQL script covers data cleaning, validation, campaign performance analysis, campaign type analysis, acquisition cost analysis, ROI analysis, cost efficiency, and marketing channel efficiency.
+
 ## Repository Structure
 
 ```text
 sql-campaign-analysis-project/
 │
 ├── campaign_business_analysis.sql
+├── marketing_campaign_dataset.csv
 └── README.md
 ```
 
