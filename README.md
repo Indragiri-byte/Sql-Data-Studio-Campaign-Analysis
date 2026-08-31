@@ -202,11 +202,5 @@ sql-campaign-analysis-project/
 
 
 
-\## Author
-
-
-
-Indragiri-byte
-
 
 
