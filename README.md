@@ -1,150 +1,212 @@
-# SQL Campaign Business Analysis
+\# Marketing Campaign Business Analysis
 
-## Project Overview
 
-This project analyzes marketing campaign performance using SQL and Google BigQuery. The analysis focuses on campaign efficiency, ROI, conversion rate, acquisition cost, campaign types, and marketing channels.
 
-The objective is to transform raw campaign data into actionable business insights that can support marketing performance evaluation and decision-making.
+\## Project Overview
 
-## Tools & Technologies
 
-* SQL
-* Google BigQuery
-* Git & GitHub
 
-## Dataset
+This project analyzes marketing campaign performance using SQL in Google BigQuery. The analysis focuses on campaign performance, campaign type effectiveness, acquisition cost, ROI, and marketing channel efficiency.
 
-The dataset contains marketing campaign information including:
 
-* Campaign ID
-* Company
-* Campaign Type
-* Target Audience
-* Duration
-* Marketing Channel
-* Conversion Rate
-* Acquisition Cost
-* ROI
-* Location
-* Language
-* Clicks
-* Impressions
-* Engagement Score
-* Customer Segment
-* Campaign Date
 
-## Analysis Performed
+\## Objectives
 
-### 1. Data Cleaning & Standardization
 
-* Standardized text fields using `TRIM()`
-* Handled blank values using `NULLIF()`
-* Replaced missing or blank categorical values with `Unknown` using `COALESCE()`
-* Created standardized column aliases for analysis
 
-### 2. Data Quality Checks
+\* Perform data cleaning and standardization
 
-* Checked for duplicate Campaign IDs
-* Identified missing or blank company values
-* Identified unique campaign types
-* Identified unique target audiences
+\* Validate data quality
 
-### 3. Overall Campaign Performance
+\* Analyze overall campaign performance
 
-The analysis evaluates:
+\* Compare campaign types based on ROI and conversion rate
 
-* Total number of marketing campaigns
-* Average ROI by campaign type
-* Average conversion rate by campaign type
-* Average customer acquisition cost by campaign type
-* Percentage of campaigns generating positive ROI
+\* Analyze customer acquisition cost
 
-### 4. Campaign Type Analysis
+\* Evaluate campaign cost efficiency
 
-Campaign types were compared based on:
+\* Compare acquisition cost against ROI
 
-* Average ROI
-* Average conversion rate
-* Average acquisition cost
-* Campaign frequency
-* Cost efficiency
+\* Identify the most cost-efficient marketing channel
 
-### 5. Campaign Efficiency Analysis
 
-An efficiency score was calculated to compare ROI relative to acquisition cost:
 
-`Efficiency Score = ROI / Acquisition Cost`
+\## Tools \& Technologies
 
-The analysis identifies campaigns and campaign types that generate stronger returns relative to their acquisition costs.
 
-### 6. Acquisition Cost vs ROI
 
-Campaigns were categorized into:
+\* Google BigQuery
 
-* Below-average acquisition cost
-* Above-average acquisition cost
+\* SQL
 
-Their average ROI was then compared to understand the relationship between acquisition cost and campaign performance.
+\* Google Looker Studio
 
-### 7. Marketing Channel Efficiency
+\* GitHub
 
-Marketing channels were evaluated based on:
 
-* Number of campaigns
-* Average ROI
-* Average acquisition cost
-* Cost efficiency
 
-## Key Findings
+\## Analysis Covered
 
-Based on the SQL analysis:
 
-* **Influencer** campaigns achieved the highest average ROI at approximately **5.0111**.
-* **Influencer** campaigns also achieved the highest average conversion rate at approximately **0.0803**.
-* **Email** campaigns had the lowest average acquisition cost at approximately **12,495.35**.
-* **Search** campaigns had the highest campaign-type efficiency score at approximately **0.00040071**.
-* **Website** was the most cost-efficient marketing channel with an efficiency score of approximately **0.00040152**.
-* **100% of campaigns generated positive ROI** in the analyzed dataset.
-* The dataset contains **200,000 campaigns**.
 
-## Business Insights
+\### 1. Data Cleaning \& Standardization
 
-The analysis suggests that campaign performance should not be evaluated using ROI alone. Combining ROI with acquisition cost provides a better view of cost efficiency.
 
-Influencer campaigns performed strongly in terms of ROI and conversion rate, while Website and Search showed strong cost-efficiency performance.
 
-These insights can help marketing teams evaluate where to allocate campaign budgets and identify channels or campaign types that provide stronger returns relative to acquisition costs.
+Standardized text fields and replaced blank values with `Unknown` to improve data consistency.
 
-## Repository Structure
+
+
+\### 2. Data Quality Checks
+
+
+
+\* Duplicate Campaign ID detection
+
+\* Missing and blank value checks
+
+\* Unique campaign type identification
+
+\* Unique target audience identification
+
+
+
+\### 3. Overall Campaign Performance
+
+
+
+\* Total number of campaigns
+
+\* Average ROI by campaign type
+
+\* Average conversion rate by campaign type
+
+\* Average acquisition cost by campaign type
+
+\* Percentage of campaigns generating positive ROI
+
+
+
+\### 4. Campaign Type Analysis
+
+
+
+\* Campaign type with the highest average ROI
+
+\* Campaign type with the highest average conversion rate
+
+\* Campaign types with the lowest acquisition cost
+
+\* Most frequently used campaign types
+
+
+
+\### 5. Campaign Efficiency Analysis
+
+
+
+\* Campaigns with the highest ROI relative to acquisition cost
+
+\* Campaigns with both high conversion rate and high acquisition cost
+
+
+
+\### 6. Acquisition Cost vs ROI
+
+
+
+Compared campaign performance between campaigns with above-average and below-average acquisition costs.
+
+
+
+\### 7. Cost Efficiency Analysis
+
+
+
+Identified the most cost-efficient campaign type based on the relationship between average ROI and average acquisition cost.
+
+
+
+\### 8. Marketing Channel Efficiency
+
+
+
+Compared marketing channels based on average ROI, average acquisition cost, and efficiency score.
+
+
+
+\## Key Findings
+
+
+
+Based on the analysis:
+
+
+
+\* \*\*Influencer\*\* campaigns achieved the highest average ROI at approximately \*\*5.0111\*\*.
+
+\* \*\*Influencer\*\* campaigns also achieved the highest average conversion rate at approximately \*\*0.0803\*\*.
+
+\* \*\*Email\*\* campaigns had the lowest average acquisition cost at approximately \*\*12,495.35\*\*.
+
+\* \*\*Search\*\* was the most cost-efficient campaign type with an efficiency score of approximately \*\*0.00040071\*\*.
+
+\* \*\*Website\*\* was the most cost-efficient marketing channel with an efficiency score of approximately \*\*0.00040152\*\*.
+
+\* \*\*100% of campaigns generated positive ROI\*\* in the analyzed dataset.
+
+\* The dataset contains \*\*200,000 campaigns\*\*.
+
+
+
+\## Interactive Dashboard
+
+
+
+Explore the interactive marketing campaign dashboard created using Google Looker Studio:
+
+
+
+\[Open Google Looker Studio Dashboard](https://datastudio.google.com/reporting/86b0ac94-3be1-492d-8f60-dd295fa9b621/page/GCB5F)
+
+
+
+\## SQL Analysis
+
+
+
+The complete SQL analysis is available in:
+
+
+
+`campaign\_business\_analysis.sql`
+
+
+
+\## Repository Structure
+
+
 
 ```text
+
 sql-campaign-analysis-project/
+
 │
-├── campaign_business_analysis.sql
+
+├── campaign\_business\_analysis.sql
+
 └── README.md
+
 ```
 
-## SQL Techniques Used
 
-* `WITH` / Common Table Expressions (CTEs)
-* `SELECT`
-* `WHERE`
-* `GROUP BY`
-* `HAVING`
-* `ORDER BY`
-* `LIMIT`
-* `CASE`
-* `COALESCE`
-* `NULLIF`
-* `TRIM`
-* `COUNT`
-* `COUNTIF`
-* `AVG`
-* `ROUND`
-* `SAFE_DIVIDE`
-* `CROSS JOIN`
-* Subqueries
 
-## Conclusion
+\## Author
 
-This project demonstrates the use of SQL for marketing analytics and business decision-making. The analysis combines data cleaning, data quality validation, descriptive analytics, ROI analysis, and efficiency evaluation to identify opportunities for improving marketing campaign performance.
+
+
+Indragiri-byte
+
+
+
